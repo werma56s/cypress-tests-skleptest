@@ -1,11 +1,12 @@
 class LoginPage {
+
     enterURL(url) {
         cy.visit(url);
         return this;
     }
 
-    enterEmail(username) {
-        cy.get("#user-name").clear().type(username);
+    enterEmail(email) {
+        cy.get("#username").clear().type(email);
         return this;
     }
 
@@ -15,15 +16,20 @@ class LoginPage {
     }
 
     clickSignButton() {
-        cy.get("#login-button").click();
+        cy.xpath("//button[contains(@class, \"login__submit\")]").click();
+        return this;
+    }
+
+    clickAccountButton(){
+        cy.get(".top-account > a").click();
         return this;
     }
 
     verifyPossityLogin() {
     try{
-        cy.get(".header_secondary_container").should('have.text', "Products");
-        cy.get(".inventory_list").should('have.text', "Sauce Labs Backpack");
-        cy.get(".shopping_cart_link").should('have.text', "Products");
+        cy.get(".woocommerce-MyAccount-content >p >strong:first-child").should('have.text', "werna56s");
+        cy.get("h1.page-title.margin-top").should('have.text', "My account");
+        cy.get(".woocommerce-MyAccount-navigation-link").should('contain.text', "Addresses");
         return true;
     }catch(error){ return false; }
     }

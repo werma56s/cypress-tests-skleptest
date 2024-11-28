@@ -4,7 +4,8 @@ Feature: Login into the site with valid data
         Given Navigate to the Website "https://skleptest.pl/"
   
     Scenario: Login into the application - standard_user
-        And Add Login "standard_user"
-        And Add Password "secret_sauce"
+        Given Click button Account
+        And Add Login
+        And Add Password
         When Click Login button
         Then User see store elements
