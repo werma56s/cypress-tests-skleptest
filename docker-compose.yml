@@ -1,0 +1,37 @@
+version: '3'
+services:
+  cypress_chrome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "cypress-docker-parallelization"
+    command: -b chrome
+    environment:
+      - BROWSER=chrome
+    volumes:
+      - .:/app
+      - ./cucumber_report_docker/chrome:/app/cucumber_report_docker
+
+  cypress_firefox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "cypress-docker-parallelization"
+    command: -b firefox
+    environment:
+      - BROWSER=firefox
+    volumes:
+      - .:/app
+      - ./cucumber_report_docker/firefox:/app/cucumber_report_docker
+  
+  cypress_edge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "cypress-docker-parallelization"
+    command: -b edge
+    environment:
+      - BROWSER=edge
+    volumes:
+      - .:/app
+      - ./cucumber_report_docker/edge:/app/cucumber_report_docker

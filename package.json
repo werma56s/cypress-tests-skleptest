@@ -4,11 +4,13 @@
     "description": "This repo contains various recipes for testing common scenarios in your application using Cypress.",
     "private": true,
     "main": "index.js",
-    "scripts": {},
-    "engines": {
-        "node": "^18.16.0 || ^20.11.1"
+    "scripts": {
+        "cypress:run": "cypress run",
+        "generate-report-per-browser": "node cucumber-html-report.js",
+        "generate-report-for-all-browsers": "node cucumber-html-report-all-browsers.js",
+        "execute:report": "npm run cypress:run && npm run generate-report"
     },
-    "license": "MIT",
+    "license": "all rights reserved",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/werma56s/cypress-tests-saucedemo"
@@ -16,9 +18,25 @@
     "author": "Weronika Gorska",
     "cypress-cucumber-preprocessor": {
         "nonGlobalStepDefinitions": false,
-        "step_definitions": "cypress/e2e/step_definitions"
+        "step_definitions": "cypress/e2e/step_definitions",
+        "cucumberJson": {
+            "generate": true,
+            "outputFolder": "cucumber_report_docker/",
+            "filePrefix": "",
+            "fileSuffix": ".cucumber"
+        }
     },
     "devDependencies": {
         "cypress-xpath": "^2.0.1"
+    },
+    "dependencies": {
+        "cypress": "^13.17.0",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "cypress-file-upload": "^5.0.8",
+        "date-fns": "^4.1.0",
+        "multiple-cucumber-html-reporter": "^3.8.0"
+    },
+    "env": {
+        "resetBetweenTests": true
     }
 }

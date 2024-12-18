@@ -132,3 +132,4 @@ dist
 #screns
 cypress/screenshots
 cypress/data
+cucumber_report_docker
