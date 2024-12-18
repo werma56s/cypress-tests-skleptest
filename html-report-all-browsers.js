@@ -1,4 +1,4 @@
-const { getAllJSONFilesFormBrowsersToOnePlace, addMetadataToJSONFiles } = require('./cucumber-html-report-support.js');
+const { getAllJSONFilesFormBrowsersToOnePlace, addMetadataToJSONFiles } = require('./html-report-all-browsers-support.js');
 const report = require('multiple-cucumber-html-reporter');
 const {format, addMinutes } = require('date-fns');
 
@@ -16,15 +16,15 @@ report.generate({
  displayDuration: true,
  pageTitle: `Test Report`,
  customData: {
-        title: 'Run info',
+        title: 'info',
         data: [
-            {label: 'Project', value: 'Custom project'},
-            {label: 'Release', value: '1.2.3'},
-            {label: 'Cycle', value: 'B11221.34321'},
+            {label: 'Project', value: 'Project'},
+            {label: 'Release', value: '1.1.1'},
+            {label: 'Cycle', value: 'B11111.11111'},
             {label: 'Execution Start Time', value: executionStartTime},
             {label: 'Execution End Time', value: executionEndTime}
         ]
     },
 });
-console.log(`Report generated for browsers`);
+console.log(`Report generated for all browsers`);
 

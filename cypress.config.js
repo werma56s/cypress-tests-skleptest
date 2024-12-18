@@ -3,12 +3,13 @@ const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: "cypress/e2e/Features/*.feature",
+    watchForFileChanges: false,
+    specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
       const browser = config.browser || process.env.BROWSER || "default";
       const outputPath = `cucumber_report_docker/${browser}/json`;
       console.log("Browser:", browser);
-      config.env.cucumberJson = { //??
+      config.env.cucumberJson = { 
         generate: true,
         outputFolder: outputPath,
         filePrefix: "",

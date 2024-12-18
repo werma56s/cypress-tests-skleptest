@@ -22,13 +22,14 @@ report.generate({
         }
     },
     customData: {
-        title: 'Run info',
+        title: 'info',
         data: [
-            {label: 'Project', value: 'Custom project'},
-            {label: 'Release', value: '1.2.3'},
-            {label: 'Cycle', value: 'B11221.34321'},
+            {label: 'Project', value: 'Project'},
+            {label: 'Release', value: '1.1.1'},
+            {label: 'Cycle', value: 'B11111.11111'},
             {label: 'Execution Start Time', value: executionStartTime},
             {label: 'Execution End Time', value: executionEndTime}
         ]
     }
 });
+console.log(`Report generated for Electron browsers`);

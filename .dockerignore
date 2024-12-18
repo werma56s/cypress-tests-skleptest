@@ -6,3 +6,4 @@ npm-debug.log
 .coverage.*
 .env
 .aws
+/cucumber_report_docker

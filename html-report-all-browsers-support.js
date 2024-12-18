@@ -79,13 +79,13 @@ function addMetadataToJSONFiles() {
         const browser = fileName.split('-')[0]; // We extract the browser name in file name
 
         if (browsers.includes(browser)) {
-          // Dodawanie metadanych
+          // Add metadata
           jsonData[0].metadata = {
             browser: {
               name: browser,
               version: browserVersions[browser] // Browser version
             },
-            device: 'Desktop - Docker',
+            device: 'Docker Container',
             platform: {
               name: 'ubuntu',
               version: 'last'
