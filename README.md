@@ -1,1 +1,3 @@
 # cypress-tests-saucedemo
+
+This project leverages Cypress for end-to-end testing and Docker for environment isolation, ensuring consistency across machines and avoiding dependency conflicts. Configured tools include Cypress-cucumber-preprocessor for BDD-style tests, Cypress-file-upload for handling file uploads, date-fns for easy date manipulation, and multiple-cucumber-html-reporter for generating readable HTML reports from test outcomes. Thanks to containerization, the project can be easily run in various environments, significantly simplifying the development process and providing greater flexibility in adapting to user and developer needs.
