@@ -20,5 +20,9 @@
     },
     "devDependencies": {
         "cypress-xpath": "^2.0.1"
+    },
+    "dependencies": {
+        "date-fns": "^4.1.0",
+        "multiple-cucumber-html-reporter": "^3.8.0"
     }
 }
