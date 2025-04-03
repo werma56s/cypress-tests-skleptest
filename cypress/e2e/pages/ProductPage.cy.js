@@ -6,7 +6,7 @@ class ProductPage {
 
     // Select a category from the page (e.g., "Wspinaczka")
     selectCategory(categoryName) {
-        cy.get('.product-category.product').contains(categoryName).should('be.visible').click(); // Zakładając, że kategorie są w menu z klasą '.category-menu'
+        cy.get('.product-category.product').contains(categoryName).scrollIntoView().should('be.visible').click(); // Zakładając, że kategorie są w menu z klasą '.category-menu'
     }
 
     // Add a specific product to the cart
@@ -23,7 +23,7 @@ class ProductPage {
 
     // Verify if the "Zobacz koszyk" button is visible after adding the product to the cart
     verifyCartButtonVisibility(buttonText) {
-        cy.contains(buttonText).should('be.visible'); // Sprawdza, czy przycisk "Zobacz koszyk" jest widoczny
+        cy.contains(buttonText).scrollIntoView().should('be.visible'); // Sprawdza, czy przycisk "Zobacz koszyk" jest widoczny
     }
 }
 

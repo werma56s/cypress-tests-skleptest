@@ -16,20 +16,20 @@ class LoginPage {
     }
 
     clickSignButton() {
-        cy.xpath("//button[contains(@class, \"login__submit\")]").click();
+        cy.xpath("//button[contains(@class, \"login__submit\")]").should('be.visible').click();
         return this;
     }
 
     clickAccountButton(){
-        cy.get(".my-account.menu-item.menu-item-type-post_type > a").click();
+        cy.get(".my-account.menu-item.menu-item-type-post_type > a").should('be.visible').click();
         return this;
     }
 
     verifyPossityLogin(email) {
     try{
         //cy.get(".woocommerce-MyAccount-content > p >strong:first-child").should('have.text', email.split('@')[0].toLowerCase());
-        cy.get("h1.entry-title").should('have.text', "Moje konto");
-        cy.get(".woocommerce-MyAccount-navigation-link").should('contain.text', "Adres");
+        cy.get("h1.entry-title").should('be.visible').should('have.text', "Moje konto");
+        cy.get(".woocommerce-MyAccount-navigation-link").should('be.visible').should('contain.text', "Adres");
         return true;
     }catch(error){ return false; }
     }
