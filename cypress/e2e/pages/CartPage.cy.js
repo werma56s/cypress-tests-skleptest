@@ -3,7 +3,7 @@ class CartPage {
     hoverCartIcon() {
         //cy.wait(2000); // Czeka 2 sekundy
         cy.scrollTo('top', { duration: 2000 });
-        cy.get('#site-header-cart > li > a.cart-contents').scrollIntoView().should('be.visible').realHover(); 
+        cy.get('#site-header-cart > li > a.cart-contents').scrollIntoView().should('be.visible', { duration: 2000 }).realHover(); 
         //cy.wait(2000); // Czeka 2 sekundy
     }
 
@@ -11,18 +11,18 @@ class CartPage {
     verifyCartIconDetails(price, productCount) {
         //cy.wait(2000); // Czeka 2 sekundy
         cy.scrollTo('top', { duration: 2000 });
-        cy.get('a > span.woocommerce-Price-amount').scrollIntoView().should('be.visible').contains(price); 
-        cy.get('a > span.count').scrollIntoView().should('be.visible').contains(productCount); 
+        cy.get('a > span.woocommerce-Price-amount').should('be.visible').contains(price); 
+        cy.get('a > span.count').should('be.visible').contains(productCount); 
     }
 
     // Verify if the cart displays the correct label
     verifyCartLabel(labelText) {
-        cy.get('p.woocommerce-mini-cart__empty-message').scrollIntoView().should('be.visible').contains(labelText); 
+        cy.get('p.woocommerce-mini-cart__empty-message').contains(labelText); 
     }
 
     // Verify if the cart displays the correct label - Click cart icon
     verifyCartLabelClickCartIcon(labelText) {
-        cy.get('div.cart-empty.woocommerce-info').scrollIntoView().should('be.visible').contains(labelText); 
+        cy.get('div.cart-empty.woocommerce-info').should('be.visible').contains(labelText); 
     }
 
     // Click the cart icon to open the cart details
