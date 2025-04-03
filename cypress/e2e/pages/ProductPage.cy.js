@@ -6,7 +6,7 @@ class ProductPage {
 
     // Select a category from the page (e.g., "Wspinaczka")
     selectCategory(categoryName) {
-        cy.get('.product-category.product').contains(categoryName).click(); // Zakładając, że kategorie są w menu z klasą '.category-menu'
+        cy.get('.product-category.product').contains(categoryName).should('be.visible').click(); // Zakładając, że kategorie są w menu z klasą '.category-menu'
     }
 
     // Add a specific product to the cart
