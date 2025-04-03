@@ -14,8 +14,17 @@ beforeEach(() => {
         email: faker.internet.email(),
         password: faker.internet.password(12, true, /[A-Za-z0-9!\"?$%^&)]/, '$')
     };
-    
+
     Cypress.env('userFakeData', userFakeData);
     cy.log(`Generated Email: ${userFakeData.email}`);
     cy.log(`Generated Password: ${userFakeData.password}`);
+  });
+
+  afterEach(() => {
+    // Cleanup after each test (e.g., reset app state, clear cookies, etc.)
+    cy.clearCookies();
+    cy.clearLocalStorage();
+    // Add any other necessary cleanup steps
+    userFakeData = {};
+    Cypress.env('userFakeData', userFakeData);
   });
