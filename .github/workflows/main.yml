@@ -40,6 +40,6 @@ jobs:
         run: |
          npx cypress run
       
-      - name: Generate report
-        run: |
-         npm run generate-report-per-browser
+      # - name: Generate report
+      #   run: |
+      #    npm run generate-report-per-browser
