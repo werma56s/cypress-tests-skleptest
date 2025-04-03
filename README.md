@@ -76,7 +76,9 @@ Once the installation is complete, you can open Cypress in the interactive mode:
 
 This command will open the Cypress Test Runner, which allows you to select and run individual tests or run all tests in the suite.
 
-**Step 4: Build and start the Docker containers:**
+**Step 4: Build and start the Docker image and containers:**
+
+    docker build . -t cypress-docker-parallelization^C
 
     docker-compose up -d
 
