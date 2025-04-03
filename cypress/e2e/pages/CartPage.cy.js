@@ -9,8 +9,8 @@ class CartPage {
 
     // Verify cart icon details (price and product count)
     verifyCartIconDetails(price, productCount) {
-        cy.wait(2000); // Czeka 2 sekundy
-        cy.scrollTo('top');
+        //cy.wait(2000); // Czeka 2 sekundy
+        cy.scrollTo('top', { duration: 2000 });
         cy.get('a > span.woocommerce-Price-amount').scrollIntoView().should('be.visible').contains(price); 
         cy.get('a > span.count').scrollIntoView().should('be.visible').contains(productCount); 
     }
