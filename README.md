@@ -70,6 +70,11 @@ Install the necessary dependencies, including Cypress, by running:
 
 This will install all required packages listed in the package.json file.
 
+**Step 2a: Add login data:**  
+
+![obraz](https://github.com/user-attachments/assets/2773ba26-e393-4374-a39d-ac686f6e2b49)   
+
+
 **Step 3 (Or Step 4): Open Cypress - Running Tests**
 Once the installation is complete, you can open Cypress in the interactive mode:
 
