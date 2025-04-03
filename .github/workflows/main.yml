@@ -27,7 +27,7 @@ jobs:
         run: |
          npm install
 
-      - name: Build image fore containers
+      - name: Build image for containers
         run: |
           docker build . -t cypress-docker-parallelization
           
@@ -36,7 +36,6 @@ jobs:
           docker compose up -d
       
       - name: Run tests
-        continue-on-error: true
         run: |
          npx cypress run
       
