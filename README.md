@@ -78,7 +78,7 @@ This command will open the Cypress Test Runner, which allows you to select and r
 
 **Step 4: Build and start the Docker image and containers:**
 
-    docker build . -t cypress-docker-parallelization^C
+    docker build . -t cypress-docker-parallelization
 
     docker-compose up -d
 
