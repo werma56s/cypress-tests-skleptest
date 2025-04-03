@@ -1,6 +1,6 @@
-# cypress-tests-saucedemo
+# cypress-tests-skleptest
 
-This project leverages Cypress for end-to-end testing and Docker for environment isolation, ensuring consistency across machines and avoiding dependency conflicts. Configured tools include Cypress-cucumber-preprocessor for BDD-style tests, Cypress-file-upload for handling file uploads, date-fns for easy date manipulation, and multiple-cucumber-html-reporter for generating readable HTML reports from test outcomes. Thanks to containerization, the project can be easily run in various environments, significantly simplifying the development process and providing greater flexibility in adapting to user and developer needs.
+The cypress-tests-skleptest is an automated testing project for the fakestore.testelka.pl website, utilizing Cypress for end-to-end testing and Docker for environment isolation, ensuring consistency across machines and avoiding dependency conflicts. The project includes tools such as Cypress-cucumber-preprocessor for BDD-style tests, Cypress-file-upload for handling file uploads, date-fns for easy date manipulation, and multiple-cucumber-html-reporter for generating readable HTML reports from test results. With containerization, the project can be run seamlessly in various environments, greatly simplifying the development process and offering enhanced flexibility for both users and developers. Additionally, the project integrates GitHub Actions for Continuous Integration (CI), automating the building, testing, and deployment processes. GitHub Actions workflows are configured to run tests on every push or pull request to the main branch, ensuring that code changes are thoroughly tested in a consistent environment.
 
 ## Features
 
@@ -28,7 +28,9 @@ This project leverages Cypress for end-to-end testing and Docker for environment
 
 • multiple-cucumber-html-reporter: Tool for generating comprehensive and user-friendly test reports.
 
-• cypress-real-events: Adds support for simulating real user interactions in Cypress tests, improving the realism of tests.
+• cypress-real-events: Adds support for simulating real user interactions in Cypress tests, improving the realism of tests.  
+
+• GitHub Actions: The core technology for automating workflows, enabling CI/CD processes directly within GitHub repositories.  
 
 # Project Structure
 
