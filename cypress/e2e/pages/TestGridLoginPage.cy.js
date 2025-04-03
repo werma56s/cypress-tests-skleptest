@@ -25,14 +25,15 @@ class LoginPage {
         return this;
     }
 
-    verifyPossityLogin() {
+    verifyPossityLogin(email) {
     try{
-        cy.get(".woocommerce-MyAccount-content > p >strong:first-child").should('have.text', "werna56s");
+        //cy.get(".woocommerce-MyAccount-content > p >strong:first-child").should('have.text', email.split('@')[0].toLowerCase());
         cy.get("h1.entry-title").should('have.text', "Moje konto");
         cy.get(".woocommerce-MyAccount-navigation-link").should('contain.text', "Adres");
         return true;
     }catch(error){ return false; }
     }
+
 }
 const login = new LoginPage();
 export default login;

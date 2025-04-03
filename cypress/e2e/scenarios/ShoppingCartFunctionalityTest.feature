@@ -3,9 +3,10 @@ Feature: Shopping cart functionality
     Background: Navigate to the Website
         Given Navigate to the Website "https://fakestore.testelka.pl/"
         Given Click button Account
-        And Add Login
-        And Add Password
-        When Click Login button
+        And Enter Registration Email
+        And Enter Registration Password
+        When Click Register submit button
+        Then User see store elements "registration"
 
     Scenario: T1A Verify empty cart display - Hover cart icon
     Given Hover cart icon 

@@ -43,7 +43,7 @@ class CartPage {
         this.hoverCartIcon();
         cy.get('span.quantity >span > bdi').contains(label2).should('be.visible'); // Cena produktu
         this.hoverCartIcon();
-        cy.get('p.woocommerce-mini-cart__total.total > span > bdi').contains(label3).should('be.visible'); // Całkowita cena
+        cy.get('p.woocommerce-mini-cart__total.total > span > bdi').contains(label3).scrollIntoView().should('be.visible'); // Całkowita cena
     }
 
     verifyCartDetailsinCart(label1, label2, label3) {
