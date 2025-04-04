@@ -30,10 +30,13 @@ jobs:
       - name: Build image for containers
         run: |
           docker build . -t cypress-docker-parallelization
-          
-      - name: Start containers
+
+      - name: Run Cypress tests with logs
         run: |
-          docker compose up -d
+          docker compose up --exit-code-from cypress 2>&1 | tee cypress.log   
+      # - name: Start containers
+      #   run: |
+      #     docker compose up -d
       
       - name: Run tests
         run: |
