@@ -1,16 +1,30 @@
 class RegistrationPage {
-    
+    // Registration form elements
+    elements = {
+        emailInput: () => cy.get('#reg_email'),
+        passwordInput: () => cy.get('#reg_password'),
+        registerButton: () => cy.get('button[name="register"]')
+    }
 
+    // Enter the email address
     enterEmail(email) {
-        cy.get('#reg_email').should('be.visible').type(email);
+        this.elements.emailInput()
+            .should('be.visible')
+            .type(email);
     }
 
+    // Enter the password
     enterPassword(password) {
-        cy.get('#reg_password').should('be.visible').type(password);
+        this.elements.passwordInput()
+            .should('be.visible')
+            .type(password);
     }
 
+    // Click the register button
     clickSubmitButton() {
-        cy.get('button[name="register"]').should('be.visible').click();
+        this.elements.registerButton()
+            .should('be.visible')
+            .click();
     }
 }
 
