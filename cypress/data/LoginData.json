@@ -1,8 +1,9 @@
 {
-    "logins": [
-      {
-        "email": "your.email+fakedata46738@gmail.com",
-        "password": "2IDEraBvpRpuBAU"
-      }
-    ]
-  }
+  "logins": [
+    {
+      "email": "your.email+fakedata46738@gmail.com",
+      "password": "2IDEraBvpRpuBAU",
+      "userType": "normal_user"
+    }
+  ]
+}
