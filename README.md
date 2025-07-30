@@ -10,7 +10,7 @@ The cypress-tests-skleptest is an automated testing project for the fakestore.te
 
 • Cypress-real-events: This library is used to simulate real user events like typing, clicking, and moving the mouse, making tests more accurate in mimicking user behavior.
 
-• Dockerized environment: Ensures the tests run in a consistent, isolated environment, simplifying setup and execution. Docker containers can be used to run Cypress tests across different browsers using Selenium Grid.
+• Dockerized environment: Ensures the tests run in a consistent, isolated environment, simplifying setup and execution.
 
 # Technologies
 • Cypress: End-to-end testing framework for fast, reliable, and easy-to-write tests.    
